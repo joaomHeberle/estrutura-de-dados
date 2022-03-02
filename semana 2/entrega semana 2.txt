@@ -1,0 +1,290 @@
+//atividade 1
+
+#include <stdio.h>
+#include <stdlib.h>
+#define t 7
+int main()
+{
+   char *matriz[t][t];
+    int l,c;
+    l=0;
+    c=0;
+do{
+    for(l=0;l<t;++l){
+
+        if(l==c){
+            matriz[l][c]="X";
+        }
+        else
+        {
+            matriz[l][c]="-";
+
+        }
+            printf("%s",matriz[l][c]);
+        }
+            printf("\n");
+
+        c++;
+
+
+
+ }while(c<t);
+
+    return 0;
+}
+
+//atividade 2
+
+#include <stdio.h>
+#include <stdlib.h>
+#define t 7
+int main()
+{
+   char *matriz[t][t];
+    int l,c;
+    l=0;
+    c=0;
+
+do{
+    for(l=0;l<t;++l){
+
+        if(l==c||l==t-c-1){
+            matriz[l][c]="X";
+        }
+        else
+        {
+            matriz[l][c]="-";
+
+        }
+            printf("%s",matriz[l][c]);
+        }
+            printf("\n");
+
+        c++;
+
+
+
+ }while(c<t);
+
+    return 0;
+}
+
+//atividade 3
+
+#include <stdio.h>
+#include <stdlib.h>
+#define t 7
+int main()
+{
+   char *matriz[t][t];
+    int l,c;
+    l=0;
+    c=0;
+
+do{
+    for(l=0;l<t;++l){
+
+        if(l>c||l==c){
+            matriz[l][c]="X";
+        }
+        else
+        {
+            matriz[l][c]="-";
+
+        }
+            printf("%s",matriz[l][c]);
+        }
+            printf("\n");
+
+        c++;
+
+
+
+ }while(c<t);
+
+    return 0;
+}
+
+//atividade 4
+
+#include <stdio.h>
+#include <stdlib.h>
+#define t 7
+int main()
+{
+   char *matriz[t][t];
+    int l,c;
+    l=0;
+    c=0;
+
+do{
+    for(l=0;l<t;++l){
+
+        if(l<(t/2)+1&&c<(t/2)+1||l>(t/2)-1&&c>(t/2)-1){
+            matriz[l][c]="X";
+        }
+        else
+        {
+            matriz[l][c]="-";
+
+        }
+            printf("%s",matriz[l][c]);
+        }
+            printf("\n");
+
+        c++;
+
+
+
+ }while(c<t);
+
+    return 0;
+}
+
+//atividade 5
+
+1) Qual será o valor de b[2] e &b[2] ?
+b[2] = 2 &b[2]= 171638
+2) Qual sua diferença b[2] e &b[2] ? 
+em b[2] o valor que é impresso é o valor que esta contido na variavel ja em &b[2] ele imprimi o endereço de memoria onde esta alocada a variavel b[2]
+
+//atividade6
+#include<stdio.h>
+#include<stdlib.h>
+#include <string.h>
+typedef struct
+{ int idade;
+char nome[100];
+}Cpessoa ;
+
+int main()
+{
+//pessoa p[10];
+//p[1].idade = 30;
+//strcpy(p[1].nome,"Lucas");
+//p[2].idade = 21;
+//strcpy(p[2].nome,"Joao");
+//p[3].idade = 10;
+//strcpy(p[3].nome,"Alberto");
+//p[4].idade = 40;
+//strcpy(p[4].nome,"Francis");
+//printf("\n%d - %s", p[1].idade, p[1].nome);
+//printf("\n%d - %s", p[2].idade, p[2].nome);
+//printf("\n%d - %s", p[3].idade, p[3].nome);
+//printf("\n%d - %s", p[4].idade, p[4].nome);
+int i;
+int tam=0;
+ Cpessoa aluno;
+Cpessoa *paluno;
+paluno = &aluno;
+paluno = (struct Cpessoa *) malloc(sizeof(paluno));
+
+strcpy((*paluno).nome, "Janice");
+(*paluno).idade = 22;
+
+strcpy((*(paluno+1)).nome, "Julia");
+(*(paluno+1)).idade = 22;
+
+strcpy((*(paluno+2)).nome, "Augusto");
+(*(paluno+2)).idade = 23;
+
+strcpy((*(paluno+3)).nome, "Alberto");
+(*(paluno+3)).idade = 24;
+
+strcpy((*(paluno+4)).nome, "miguel");
+(*(paluno+4)).idade = 24;
+strcpy((*(paluno+5)).nome, "jose");
+(*(paluno+5)).idade = 24;
+
+strcpy((*(paluno+6)).nome, "jc");
+(*(paluno+6)).idade = 24;
+strcpy((*(paluno+7)).nome, "xzx");
+(*(paluno+7)).idade = 24;
+strcpy((*(paluno+8)).nome, "s");
+(*(paluno+8)).idade = 24;
+for (int i = 0; i<9 ; ++i)
+{
+
+printf("%s - %d \n", (*paluno).nome, (*paluno).idade);
+printf("%s - %d \n", paluno->nome, paluno->idade);
+paluno++;
+}
+getchar();
+free(paluno);
+
+system("pause");
+return 0;
+};
+strcpy((*(paluno+4)).nome, "miguel");
+(*(paluno+4)).idade = 24;
+for (int i = 0; i<5 ; ++i)
+{
+
+
+printf("%s - %d \n", (*paluno).nome, (*paluno).idade);
+printf("%s - %d \n", paluno->nome, paluno->idade);
+paluno++;
+}
+getchar();
+free(paluno);
+
+system("pause");
+return 0;
+};
+
+//atividade7
+#include<stdio.h>
+#include<stdlib.h>
+#include <string.h>
+typedef struct
+{ int idade;
+char nome[100];
+}Cpessoa ;
+
+int main()
+{
+
+int i,p;
+int age=0;
+char name[200]="";
+char opcao[3]="";
+i=p=0;
+Cpessoa aluno;
+Cpessoa *paluno;
+paluno = &aluno;
+paluno = (struct Cpessoa *) malloc(sizeof(paluno));
+printf("%d",paluno);
+do{
+    printf("Inserir Novo: Sim/Nao\n");
+    gets(opcao);
+    strupr(opcao);
+    if(strcmp(opcao,"SIM")==0){
+        printf("digite um nome: ");
+        gets(name);
+        strcpy((*(paluno+p)).nome, name);
+        printf("digite uma idade: ");
+        scanf("%d",&age);
+        getchar();
+        (*(paluno+p)).idade = age;
+        printf("nome: %s\n",name);
+        p++;
+    }else if(strcmp(opcao,"NAO")!=0){
+    printf("Apenas Sim ou Nao\n");
+
+    }
+}while (strcmp(opcao,"NAO"))
+    ;
+
+for (i = 1; i<=p ;i++)
+{
+printf("%s - %d \n", paluno->nome, paluno->idade);
+paluno++;
+
+}
+
+paluno=paluno-p;
+printf("%d",paluno);
+system("pause");
+free(paluno);
+return 0;
+};

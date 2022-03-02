@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1616790370 source:c:\users\joao heberle\desktop\aula\estrutura de dados\trabalho 2\trab2\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<cstring>
+

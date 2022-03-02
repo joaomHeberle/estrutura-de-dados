@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1611689071 source:c:\users\joao heberle\desktop\aula\estrutura de dados\semana 2\atividade 5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

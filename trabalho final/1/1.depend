@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1618009052 source:c:\users\joao heberle\desktop\aula\estrutura de dados\trabalho final\1\main.cpp
+	<stdlib.h>
+	<stdio.h>
+	"arvore.h"
+
+1618006675 c:\users\joao heberle\desktop\aula\estrutura de dados\trabalho final\1\arvore.h
+	<stdlib.h>
+	<stdio.h>
+	<cstring>
+
